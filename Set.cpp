@@ -13,6 +13,7 @@ int main() {
     s.insert(0);
     s.insert(1);
     s.insert(4);
+    s.emplace(3);
     s.insert(0);
     s.insert(5);
 
@@ -24,7 +25,7 @@ int main() {
     set<int>::iterator it = s.begin();
     it++;
     
-    s.erase(it);  // T.C = O(log n)
+    s.erase(it);  // T.C = O(log n). Can erase both, an element directly or an iterator
     for(auto i: s) {
         count<<i<<" ";
     }
@@ -32,12 +33,19 @@ int main() {
 
     cout<<"check if 5 is present or not :"<<s.count()<<endl; // check if an element is present. T.C. = O(log n)
 
-    set<int>::iterator itr = s.find(5); // returns reference to the element in the Set. T.C = O(log n)
+    set<int>::iterator itr = s.find(5); /* Returns reference(iterator) to the element in the Set. T.C = O(log n)
+    If an element is not present then find() returns an itrator which points to the next to the last element of the set */
     cout<<"Value present at itr ="<<*itr<<endl;
 
     for(auto it=itr; it!=s.end();it++) {
         cout<<*it<<" ";
     }
     cout<<endl;
+
+    // Upper and lower bound
+    auto it = s.lower_bound(2);
+    auto it2 = s.upper_bound(3);
+
+    return 0;
 
 }

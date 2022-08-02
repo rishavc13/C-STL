@@ -8,8 +8,10 @@ using namespace std;
 int main() {
     deque<int> d;
 
-    d.push_back(1); // insert elements at back
-    d.push_front(2); // insert elements at front
+    d.push_back(1);
+    d.emplace_back(4); // insert elements at back
+    d.push_front(2);
+    d.emplace_front(9); // insert elements at front
 
     for (int i:d){
         cout<<i<<" ";
@@ -28,7 +30,7 @@ int main() {
     }
 
     cout<<"Print first element :"<<d.at(1)<<endl;
-    cout<<"Front elelemnt :"<<d.front()<<endl;
+    cout<<"Front element :"<<d.front()<<endl;
     cout<<"Last element :"<<d.back()<<endl;
     cout<<"Is empty ?"<<d.empty()<<endl;
 
@@ -40,4 +42,7 @@ int main() {
         cout<<i<<" ";
     }
     cout<<endl;
+
+    return 0;
+
 }

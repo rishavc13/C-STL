@@ -13,7 +13,9 @@ int main() {
     list<int> w(5,100); // Create a list w with 5 elements, each inititalized to 100
 
     l.push_back(1);
+    l.emplace_back(3);
     l.push_front(2);
+    l.emplace_front(6);
 
     for(int i:l){
         cout<<i<<" ";
@@ -25,5 +27,9 @@ int main() {
     }
     cout<<endl;
 
+    /* Rest funcitons are same as in vector :
+    begin, end, rbegin, rend, clear, insert, size, empty, swap */
+
+    return 0;
 
 }

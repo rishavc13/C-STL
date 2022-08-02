@@ -89,7 +89,7 @@ int main() {
     // if v = {10,20,30,40,50}
     v.erase(v.begin()+1, v.begin()+3);  // v = {10,40,50}  [start, end)
 
-    // insert()
+    // insert() : It is a costly operation in Vector
     vector<int> v(2,100);  // {100, 100}
     v.insert(v.begin(), 300);  // {300, 100, 100}
     v.insert(v.begin + 1, 2, 100);  // {300, 10, 10, 100, 100}
