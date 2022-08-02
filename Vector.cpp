@@ -3,6 +3,9 @@
 
 using namespacestd;
 
+/* Vectors are dynamic in nature. If an element is appended when the vector is full, then the vector doubles its size everytime.
+Random access is possible */
+
 int main() {
     vector<int> v;
 
